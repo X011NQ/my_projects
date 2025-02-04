@@ -1,0 +1,27 @@
+class library :
+    def __init__(self,list_of_books):
+        self.books=list_of_books
+
+    def display_available_books(self):
+        print('the books we have in our library is as following:')
+        for i in range(len(self.books)):
+            print(self.books[i])
+        
+    def lendbook(self):
+         requested_book= input('enter the name of the requsted book')
+         self.requsted=requested_book
+         if self.requsted in self.books:
+             print ('avilable')
+             books=list(self.books)
+             books.remove(requested_book)
+             self.books=books
+         else:
+             print('not available')
+    def addbook(self):
+        returned_book=input('enter the name of the book that you want to add')
+        self.return_book=returned_book
+        books=list(self.books)
+        books.append(returned_book)
+        self.books=books
+
+        
